@@ -28,7 +28,7 @@ extension CategorieViewController: UITableViewDataSource, UITableViewDelegate{
         cell.categorie?.text = "Entertainment"
         return cell
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 70
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
 }
