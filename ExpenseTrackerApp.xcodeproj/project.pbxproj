@@ -22,6 +22,7 @@
 		162AB771297A988000B99B09 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB770297A988000B99B09 /* NewsTableViewCell.swift */; };
 		162AB773297A989900B99B09 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB772297A989900B99B09 /* NewsViewController.swift */; };
 		162AB775297ECC6A00B99B09 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB774297ECC6A00B99B09 /* Article.swift */; };
+		162AB777297FE10000B99B09 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB776297FE10000B99B09 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		162AB770297A988000B99B09 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		162AB772297A989900B99B09 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		162AB774297ECC6A00B99B09 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		162AB776297FE10000B99B09 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				162AB747297154C200B99B09 /* AppDelegate.swift */,
 				162AB749297154C200B99B09 /* SceneDelegate.swift */,
 				162AB74B297154C200B99B09 /* ViewController.swift */,
+				162AB776297FE10000B99B09 /* LogInViewController.swift */,
 				162AB7662975879B00B99B09 /* HomeTableViewCell.swift */,
 				162AB768297587E600B99B09 /* HomeViewController.swift */,
 				162AB76E2978367400B99B09 /* CategorieTableViewCell.swift */,
@@ -171,6 +174,7 @@
 				162AB76D2978364600B99B09 /* CategorieViewController.swift in Sources */,
 				162AB773297A989900B99B09 /* NewsViewController.swift in Sources */,
 				162AB76B29759A0B00B99B09 /* AddViewController.swift in Sources */,
+				162AB777297FE10000B99B09 /* LogInViewController.swift in Sources */,
 				162AB76F2978367400B99B09 /* CategorieTableViewCell.swift in Sources */,
 				162AB7672975879B00B99B09 /* HomeTableViewCell.swift in Sources */,
 				162AB775297ECC6A00B99B09 /* Article.swift in Sources */,

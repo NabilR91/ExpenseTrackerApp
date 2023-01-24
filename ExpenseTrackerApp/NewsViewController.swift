@@ -9,7 +9,7 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
-    var url = URL(string: "https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=76fa3fdda479423d960b6a312dc96880")
+    var url = URL(string: "https://newsapi.org/v2/everything?q=tesla&from=2022-12-24&language=en&sortBy=publishedAt&apiKey=76fa3fdda479423d960b6a312dc96880")
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -21,7 +21,12 @@ class NewsViewController: UIViewController {
         tableView.delegate = self
         topNews.layer.cornerRadius = 30
         topNews.clipsToBounds = true
-        fetchData{data in self.article = data}
+        fetchData{data in self.article = data
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+       
     }
     
     func fetchData(completion: @escaping([Articles])->()){
@@ -35,6 +40,7 @@ class NewsViewController: UIViewController {
             var result: Data?
             do {
                 result = try decoder.decode(Data.self, from: data)
+                print (result!.articles)
                 completion(result!.articles)
             } catch{
                 print("error \(error)")
@@ -48,15 +54,16 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return article.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
         tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as!
         NewsTableViewCell
-        cell.titel?.text = "Spitzenmanager widersprechen Scholz und fordern Reformagenda für Europa"
-        cell.review?.text = "Europa hat die tiefe Wirtschaftskrise vermieden, doch für neues Wachstum fehlen der Wirtschaft zufolge Impulse. CEOs machen in Davos Vorschläge."
-        cell.date?.text = "19.01.2023"
+        cell.titel?.text = article[indexPath.row].title
+        cell.review?.text = article[indexPath.row].description
+        cell.date?.text = article[indexPath.row].publishedAt
+        
         return cell
     }
     

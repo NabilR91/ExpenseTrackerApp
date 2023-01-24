@@ -14,8 +14,10 @@ struct Data: Codable {
 
 struct Articles: Codable {
     var title: String
-    var url: String
-    var urlToImage: String
+//    var url: URL
+//    var urlToImage: URL
     var content: String
+    var description: String
+    var publishedAt: String
 }
 
