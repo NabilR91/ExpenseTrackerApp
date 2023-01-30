@@ -23,6 +23,13 @@
 		162AB773297A989900B99B09 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB772297A989900B99B09 /* NewsViewController.swift */; };
 		162AB775297ECC6A00B99B09 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB774297ECC6A00B99B09 /* Article.swift */; };
 		162AB777297FE10000B99B09 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB776297FE10000B99B09 /* LogInViewController.swift */; };
+		162AB77A29801DA000B99B09 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 162AB77829801DA000B99B09 /* Model.xcdatamodeld */; };
+		162AB7812981656000B99B09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7802981656000B99B09 /* RegisterViewController.swift */; };
+		162AB78329816B3500B99B09 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78229816B3500B99B09 /* WelcomeViewController.swift */; };
+		162AB7872982C64300B99B09 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7862982C64300B99B09 /* AddScreenViewController.swift */; };
+		162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7882987F97600B99B09 /* ProfilViewController.swift */; };
+		162AB78C2988000800B99B09 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78A2988000700B99B09 /* User+CoreDataClass.swift */; };
+		162AB78D2988000800B99B09 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78B2988000800B99B09 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		162AB772297A989900B99B09 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		162AB774297ECC6A00B99B09 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		162AB776297FE10000B99B09 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		162AB77929801DA000B99B09 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		162AB7802981656000B99B09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		162AB78229816B3500B99B09 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		162AB7862982C64300B99B09 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
+		162AB7882987F97600B99B09 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		162AB78A2988000700B99B09 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		162AB78B2988000800B99B09 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,8 @@
 		162AB73B297154C200B99B09 = {
 			isa = PBXGroup;
 			children = (
+				162AB7862982C64300B99B09 /* AddScreenViewController.swift */,
+				162AB78229816B3500B99B09 /* WelcomeViewController.swift */,
 				162AB746297154C200B99B09 /* ExpenseTrackerApp */,
 				162AB745297154C200B99B09 /* Products */,
 			);
@@ -76,9 +92,11 @@
 		162AB746297154C200B99B09 /* ExpenseTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				162AB77F29801E9300B99B09 /* Model */,
 				162AB747297154C200B99B09 /* AppDelegate.swift */,
 				162AB749297154C200B99B09 /* SceneDelegate.swift */,
 				162AB74B297154C200B99B09 /* ViewController.swift */,
+				162AB7802981656000B99B09 /* RegisterViewController.swift */,
 				162AB776297FE10000B99B09 /* LogInViewController.swift */,
 				162AB7662975879B00B99B09 /* HomeTableViewCell.swift */,
 				162AB768297587E600B99B09 /* HomeViewController.swift */,
@@ -93,8 +111,19 @@
 				162AB758297154C300B99B09 /* Info.plist */,
 				162AB750297154C200B99B09 /* ExpenseTrackerApp.xcdatamodeld */,
 				162AB76A29759A0B00B99B09 /* AddViewController.swift */,
+				162AB77829801DA000B99B09 /* Model.xcdatamodeld */,
+				162AB7882987F97600B99B09 /* ProfilViewController.swift */,
 			);
 			path = ExpenseTrackerApp;
+			sourceTree = "<group>";
+		};
+		162AB77F29801E9300B99B09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				162AB78A2988000700B99B09 /* User+CoreDataClass.swift */,
+				162AB78B2988000800B99B09 /* User+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,15 +200,22 @@
 				162AB769297587E600B99B09 /* HomeViewController.swift in Sources */,
 				162AB74C297154C200B99B09 /* ViewController.swift in Sources */,
 				162AB771297A988000B99B09 /* NewsTableViewCell.swift in Sources */,
+				162AB78C2988000800B99B09 /* User+CoreDataClass.swift in Sources */,
+				162AB77A29801DA000B99B09 /* Model.xcdatamodeld in Sources */,
 				162AB76D2978364600B99B09 /* CategorieViewController.swift in Sources */,
 				162AB773297A989900B99B09 /* NewsViewController.swift in Sources */,
 				162AB76B29759A0B00B99B09 /* AddViewController.swift in Sources */,
 				162AB777297FE10000B99B09 /* LogInViewController.swift in Sources */,
+				162AB78329816B3500B99B09 /* WelcomeViewController.swift in Sources */,
 				162AB76F2978367400B99B09 /* CategorieTableViewCell.swift in Sources */,
 				162AB7672975879B00B99B09 /* HomeTableViewCell.swift in Sources */,
+				162AB7872982C64300B99B09 /* AddScreenViewController.swift in Sources */,
 				162AB775297ECC6A00B99B09 /* Article.swift in Sources */,
 				162AB748297154C200B99B09 /* AppDelegate.swift in Sources */,
+				162AB7812981656000B99B09 /* RegisterViewController.swift in Sources */,
+				162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */,
 				162AB74A297154C200B99B09 /* SceneDelegate.swift in Sources */,
+				162AB78D2988000800B99B09 /* User+CoreDataProperties.swift in Sources */,
 				162AB752297154C200B99B09 /* ExpenseTrackerApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +443,16 @@
 			);
 			currentVersion = 162AB751297154C200B99B09 /* ExpenseTrackerApp.xcdatamodel */;
 			path = ExpenseTrackerApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		162AB77829801DA000B99B09 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				162AB77929801DA000B99B09 /* Model.xcdatamodel */,
+			);
+			currentVersion = 162AB77929801DA000B99B09 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

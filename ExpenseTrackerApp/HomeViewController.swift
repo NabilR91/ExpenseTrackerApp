@@ -15,6 +15,8 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         tableview.dataSource = self
         tableview.delegate = self
+        
+        self.tabBarController?.tabBar.isHidden = false
     
         
         

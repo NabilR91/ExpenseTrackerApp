@@ -9,18 +9,15 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
-    var url = URL(string: "https://newsapi.org/v2/everything?q=tesla&from=2022-12-24&language=en&sortBy=publishedAt&apiKey=76fa3fdda479423d960b6a312dc96880")
+    var url = URL(string: "https://newsapi.org/v2/everything?q=tesla&language=en&sortBy=publishedAt&apiKey=76fa3fdda479423d960b6a312dc96880")
     
     @IBOutlet weak var tableView: UITableView!
 
-    @IBOutlet weak var topNews: UIImageView!
     var article = [Articles]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        topNews.layer.cornerRadius = 30
-        topNews.clipsToBounds = true
         fetchData{data in self.article = data
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -60,6 +57,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
         let cell =
         tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as!
         NewsTableViewCell
+        cell.layer.cornerRadius = 10
         cell.titel?.text = article[indexPath.row].title
         cell.review?.text = article[indexPath.row].description
         cell.date?.text = article[indexPath.row].publishedAt
