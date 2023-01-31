@@ -69,8 +69,11 @@ override func viewDidLoad() {
             // Benutzer registriert, direkt zum Homescreen wechseln
            checkIfUserDataExist()
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            self.navigationController?.pushViewController(homeViewController, animated: true)
+            
+            let homeViewController = self.storyboard?.instantiateViewController(identifier: "TabBarCon") as! UITabBarController
+            self.present(homeViewController, animated: true, completion: nil)
+//            let homeViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+//            self.navigationController?.pushViewController(homeViewController, animated: true)
         }
     }
 

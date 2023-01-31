@@ -38,6 +38,7 @@ class RegisterViewController: UIViewController {
         newUser.setValue(lastNameTextField.text, forKey: "lastName")
         newUser.setValue(emailTextField.text, forKey: "email")
         newUser.setValue(passwordTextField.text, forKey: "password")
+        newUser.setValue(true, forKey: "isLoggedIn")
         do {
             try context.save()
             print("User saved")

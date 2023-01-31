@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160A0B6629892EAC006ED525 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160A0B6429892EAC006ED525 /* User+CoreDataClass.swift */; };
+		160A0B6729892EAC006ED525 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160A0B6529892EAC006ED525 /* User+CoreDataProperties.swift */; };
 		162AB748297154C200B99B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB747297154C200B99B09 /* AppDelegate.swift */; };
 		162AB74A297154C200B99B09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB749297154C200B99B09 /* SceneDelegate.swift */; };
 		162AB74C297154C200B99B09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB74B297154C200B99B09 /* ViewController.swift */; };
@@ -28,11 +30,11 @@
 		162AB78329816B3500B99B09 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78229816B3500B99B09 /* WelcomeViewController.swift */; };
 		162AB7872982C64300B99B09 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7862982C64300B99B09 /* AddScreenViewController.swift */; };
 		162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7882987F97600B99B09 /* ProfilViewController.swift */; };
-		162AB78C2988000800B99B09 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78A2988000700B99B09 /* User+CoreDataClass.swift */; };
-		162AB78D2988000800B99B09 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78B2988000800B99B09 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160A0B6429892EAC006ED525 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		160A0B6529892EAC006ED525 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		162AB744297154C200B99B09 /* ExpenseTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		162AB747297154C200B99B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		162AB749297154C200B99B09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		162AB78229816B3500B99B09 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		162AB7862982C64300B99B09 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		162AB7882987F97600B99B09 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
-		162AB78A2988000700B99B09 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		162AB78B2988000800B99B09 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +74,6 @@
 		162AB73B297154C200B99B09 = {
 			isa = PBXGroup;
 			children = (
-				162AB7862982C64300B99B09 /* AddScreenViewController.swift */,
-				162AB78229816B3500B99B09 /* WelcomeViewController.swift */,
 				162AB746297154C200B99B09 /* ExpenseTrackerApp */,
 				162AB745297154C200B99B09 /* Products */,
 			);
@@ -96,10 +94,12 @@
 				162AB747297154C200B99B09 /* AppDelegate.swift */,
 				162AB749297154C200B99B09 /* SceneDelegate.swift */,
 				162AB74B297154C200B99B09 /* ViewController.swift */,
+				162AB78229816B3500B99B09 /* WelcomeViewController.swift */,
 				162AB7802981656000B99B09 /* RegisterViewController.swift */,
 				162AB776297FE10000B99B09 /* LogInViewController.swift */,
 				162AB7662975879B00B99B09 /* HomeTableViewCell.swift */,
 				162AB768297587E600B99B09 /* HomeViewController.swift */,
+				162AB7862982C64300B99B09 /* AddScreenViewController.swift */,
 				162AB76E2978367400B99B09 /* CategorieTableViewCell.swift */,
 				162AB76C2978364600B99B09 /* CategorieViewController.swift */,
 				162AB770297A988000B99B09 /* NewsTableViewCell.swift */,
@@ -120,8 +120,8 @@
 		162AB77F29801E9300B99B09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				162AB78A2988000700B99B09 /* User+CoreDataClass.swift */,
-				162AB78B2988000800B99B09 /* User+CoreDataProperties.swift */,
+				160A0B6429892EAC006ED525 /* User+CoreDataClass.swift */,
+				160A0B6529892EAC006ED525 /* User+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 				162AB769297587E600B99B09 /* HomeViewController.swift in Sources */,
 				162AB74C297154C200B99B09 /* ViewController.swift in Sources */,
 				162AB771297A988000B99B09 /* NewsTableViewCell.swift in Sources */,
-				162AB78C2988000800B99B09 /* User+CoreDataClass.swift in Sources */,
+				160A0B6629892EAC006ED525 /* User+CoreDataClass.swift in Sources */,
 				162AB77A29801DA000B99B09 /* Model.xcdatamodeld in Sources */,
 				162AB76D2978364600B99B09 /* CategorieViewController.swift in Sources */,
 				162AB773297A989900B99B09 /* NewsViewController.swift in Sources */,
@@ -215,7 +215,7 @@
 				162AB7812981656000B99B09 /* RegisterViewController.swift in Sources */,
 				162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */,
 				162AB74A297154C200B99B09 /* SceneDelegate.swift in Sources */,
-				162AB78D2988000800B99B09 /* User+CoreDataProperties.swift in Sources */,
+				160A0B6729892EAC006ED525 /* User+CoreDataProperties.swift in Sources */,
 				162AB752297154C200B99B09 /* ExpenseTrackerApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
