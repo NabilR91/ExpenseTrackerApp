@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 
 class ProfilViewController: UIViewController {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -19,21 +20,17 @@ class ProfilViewController: UIViewController {
     
     
     func logOut() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
         
-        let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
         do {
-            let results = try managedContext.fetch(fetchRequest)
+            let results = try context.fetch(fetchRequest)
             if results.count > 0 {
-                let user = results[0] as! NSManagedObject
-                user.setValue(false, forKey: "isLoggedIn")
+                let user = results[0] as! User
+                user.isLoggedIn = false
                 
                 do {
-                    try managedContext.save()
+                    try context.save()
                 } catch let error as NSError {
                     print("Could not log out: \(error), \(error.userInfo)")
                 }

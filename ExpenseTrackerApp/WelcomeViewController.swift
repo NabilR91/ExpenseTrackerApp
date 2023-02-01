@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         
         checkLogIn()
         
@@ -43,13 +44,13 @@ class WelcomeViewController: UIViewController {
         do {
             let results = try context.fetch(request)
             if results.count > 0 {
-                for user in results as! [NSManagedObject]{
-                    if (user.value(forKey: "isLoggedIn")as! Bool){
+                for i in 0...results.count-1{
+                    let user = results[i] as! User
+                    if (user.isLoggedIn){
                         let homeViewController = self.storyboard?.instantiateViewController(identifier: "TabBarCon") as! UITabBarController
                         self.present(homeViewController, animated: true, completion: nil)
                     }
                 }
-                
             }
         } catch let error as NSError {
             print("Could not fetch: \(error), \(error.userInfo)")

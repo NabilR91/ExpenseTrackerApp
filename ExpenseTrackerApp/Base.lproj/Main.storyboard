@@ -147,6 +147,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="SignUp" cornerStyle="capsule"/>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="2jS-WN-TUR" eventType="touchUpInside" id="G3y-g8-C0H"/>
+                                    <segue destination="6nG-YT-Z8F" kind="show" id="yDd-Tt-bVL"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bmS-Xk-tmd">
@@ -303,11 +304,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="TRl-Qx-RY1" customClass="HomeViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lY5-6d-jeq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-B0-XgW">
-                                <rect key="frame" x="15" y="259" width="363" height="510"/>
+                                <rect key="frame" x="15" y="200" width="363" height="534"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="101" id="BOx-BL-hXo" customClass="HomeTableViewCell" customModule="ExpenseTrackerApp" customModuleProvider="target">
@@ -377,7 +378,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UUI-Nr-gJr">
-                                <rect key="frame" x="16" y="186" width="68.333333333333329" height="36"/>
+                                <rect key="frame" x="16" y="127" width="68.333333333333329" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Einkommen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1R-Jg-xLF">
                                         <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="15.666666666666666"/>
@@ -394,7 +395,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DhT-1h-lg3">
-                                <rect key="frame" x="301" y="186" width="59.666666666666686" height="36"/>
+                                <rect key="frame" x="301" y="127" width="59.666666666666686" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ausgaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-Sv-oHC">
                                         <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="15.666666666666666"/>
@@ -440,21 +441,21 @@
             <objects>
                 <viewController id="fVx-0Q-tF3" customClass="CategorieViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRx-79-0at">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Ipz-NG-iAx">
-                                <rect key="frame" x="-2" y="-1" width="393" height="852"/>
+                                <rect key="frame" x="-3" y="-1" width="393" height="782"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep3-Dr-X35">
-                                        <rect key="frame" x="8" y="82" width="208" height="38"/>
+                                        <rect key="frame" x="8" y="23" width="208" height="38"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="37"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-Us-CTe">
-                                        <rect key="frame" x="0.0" y="172" width="393" height="598"/>
+                                        <rect key="frame" x="0.0" y="113" width="393" height="622"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categorieCell" rowHeight="55" id="ziD-UU-fMV" customClass="CategorieTableViewCell" customModule="ExpenseTrackerApp" customModuleProvider="target">
@@ -514,19 +515,19 @@
             </objects>
             <point key="canvasLocation" x="-1634.3511450381679" y="478.87323943661977"/>
         </scene>
-        <!--Add View Controller-->
+        <!--Add Screen View Controller-->
         <scene sceneID="GIW-jL-bca">
             <objects>
-                <viewController modalPresentationStyle="formSheet" id="lZ5-nU-ZJe" customClass="AddViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="lZ5-nU-ZJe" customClass="AddScreenViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZT-se-Yfg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="33,40€" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRG-pz-91g">
                                 <rect key="frame" x="96" y="184" width="200" height="45.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategorie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L96-gI-Gvh">
                                 <rect key="frame" x="96" y="263" width="200" height="45.666666666666686"/>
@@ -559,6 +560,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Hinzufügen" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="lZ5-nU-ZJe" eventType="touchUpInside" id="Y7y-hM-I1I"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="segControl" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9w6-YW-t6M">
                                 <rect key="frame" x="117" y="469" width="159" height="32"/>
@@ -579,6 +583,14 @@
                     <tabBarItem key="tabBarItem" title="" id="UEN-wS-IaL">
                         <imageReference key="image" image="plus" catalog="system" symbolScale="large" renderingMode="template"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="addButton" destination="eEc-qG-yIQ" id="Cfr-Pm-zoj"/>
+                        <outlet property="amountTextField" destination="vRG-pz-91g" id="l82-TG-QLJ"/>
+                        <outlet property="categorieTextField" destination="L96-gI-Gvh" id="Gi9-1X-ll0"/>
+                        <outlet property="dateTextField" destination="Gho-mN-by5" id="8LZ-gX-fbq"/>
+                        <outlet property="notesTextField" destination="Mb5-aF-E1j" id="eGR-cd-aJD"/>
+                        <outlet property="segController" destination="9w6-YW-t6M" id="vah-0c-Fha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqL-ZB-WaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -589,11 +601,11 @@
             <objects>
                 <viewController id="vk7-sN-Ib7" customClass="NewsViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="az3-mO-9x3" customClass="NewsTableViewCell" customModule="ExpenseTrackerApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-c2-VVP">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="191" id="WVe-qD-v1J" customClass="NewsTableViewCell" customModule="ExpenseTrackerApp" customModuleProvider="target">
@@ -661,13 +673,13 @@
         <!--Profil-->
         <scene sceneID="EM2-HN-IMM">
             <objects>
-                <viewController id="p4k-K6-Ekp" customClass="ProfilViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="p4k-K6-Ekp" customClass="ProfilViewController" customModule="ExpenseTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b68-gb-b5a">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-kO-Pdg">
-                                <rect key="frame" x="0.0" y="159" width="393" height="610"/>
+                                <rect key="frame" x="0.0" y="100" width="393" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-To-iev">
@@ -689,7 +701,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-dc-ofu">
-                                <rect key="frame" x="304" y="59" width="73" height="35"/>
+                                <rect key="frame" x="304" y="0.0" width="73" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="logout"/>
                                 <connections>
