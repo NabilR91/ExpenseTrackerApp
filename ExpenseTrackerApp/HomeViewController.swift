@@ -31,6 +31,10 @@ class HomeViewController: UIViewController{
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Expense")
+        if selectedCategorie != ""{
+            let predicate = NSPredicate(format: "category == %@", selectedCategorie)
+            fetchRequest.predicate = predicate
+        }
         do {
             expenses = try managedContext.fetch(fetchRequest) as! [Expense]
             tableview.reloadData()

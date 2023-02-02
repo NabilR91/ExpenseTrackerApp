@@ -22,6 +22,13 @@ class AddScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//
+//        //Hinzufügen des DatePickers zum dateTextfield
+//        datePicker.datePickerMode = .date
+//        dateTextField.inputView = datePicker
+//        let toolbar = UIToolbar()
+//        toolbar.sizeToFit()
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: <#T##UIBarButtonItem.SystemItem#>, target: <#T##Any?#>, action: <#T##Selector?#>)
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
