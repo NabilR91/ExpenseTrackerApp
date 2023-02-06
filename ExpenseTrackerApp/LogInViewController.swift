@@ -42,9 +42,9 @@ class LogInViewController: UIViewController {
                 for data in result as! [NSManagedObject] {
                     if passwordTextField.text == data.value(forKey: "password") as? String {
                         // Navigiert zum HomeScreen
-                        
-                        data.setValue(true, forKey: "isLoggedIn")
-                        print(data.value(forKey: "isLoggedIn"))
+                        let user = data as! User
+                        user.isLoggedIn = true
+                        currentUser = user
                         do {
                             try context.save()
                             print("User saved")

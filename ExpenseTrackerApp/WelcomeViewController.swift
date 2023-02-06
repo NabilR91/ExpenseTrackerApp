@@ -47,6 +47,7 @@ class WelcomeViewController: UIViewController {
                 for i in 0...results.count-1{
                     let user = results[i] as! User
                     if (user.isLoggedIn){
+                        currentUser = user
                         let homeViewController = self.storyboard?.instantiateViewController(identifier: "TabBarCon") as! UITabBarController
                         self.present(homeViewController, animated: true, completion: nil)
                     }

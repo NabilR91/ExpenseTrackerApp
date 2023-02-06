@@ -29,6 +29,7 @@
 		162AB78329816B3500B99B09 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78229816B3500B99B09 /* WelcomeViewController.swift */; };
 		162AB7872982C64300B99B09 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7862982C64300B99B09 /* AddScreenViewController.swift */; };
 		162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7882987F97600B99B09 /* ProfilViewController.swift */; };
+		16ED60D4298BFC06005DCA97 /* constance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED60D3298BFC06005DCA97 /* constance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		162AB78229816B3500B99B09 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		162AB7862982C64300B99B09 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		162AB7882987F97600B99B09 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		16ED60D3298BFC06005DCA97 /* constance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				162AB76A29759A0B00B99B09 /* AddViewController.swift */,
 				162AB77829801DA000B99B09 /* Model.xcdatamodeld */,
 				162AB7882987F97600B99B09 /* ProfilViewController.swift */,
+				16ED60D3298BFC06005DCA97 /* constance.swift */,
 			);
 			path = ExpenseTrackerApp;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				162AB748297154C200B99B09 /* AppDelegate.swift in Sources */,
 				162AB7812981656000B99B09 /* RegisterViewController.swift in Sources */,
 				162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */,
+				16ED60D4298BFC06005DCA97 /* constance.swift in Sources */,
 				162AB74A297154C200B99B09 /* SceneDelegate.swift in Sources */,
 				160A0B6D29895645006ED525 /* User+CoreDataProperties.swift in Sources */,
 				160A0B6C29895645006ED525 /* User+CoreDataClass.swift in Sources */,
