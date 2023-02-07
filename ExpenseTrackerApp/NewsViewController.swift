@@ -9,7 +9,7 @@ import UIKit
 
 class NewsViewController: UIViewController {
     
-    var url = URL(string: "https://newsapi.org/v2/everything?q=tesla&language=en&sortBy=publishedAt&apiKey=76fa3fdda479423d960b6a312dc96880")
+    var url = URL(string: "https://newsapi.org/v2/everything?q=wallstreet&language=en&sortBy=publishedAt&apiKey=76fa3fdda479423d960b6a312dc96880")
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -21,6 +21,7 @@ class NewsViewController: UIViewController {
         fetchData{data in self.article = data
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                
             }
         }
        
@@ -59,8 +60,13 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
         NewsTableViewCell
         cell.layer.cornerRadius = 10
         cell.titel?.text = article[indexPath.row].title
+        cell.titel.lineBreakMode = .byTruncatingTail
+        cell.titel.adjustsFontSizeToFitWidth = false
         cell.review?.text = article[indexPath.row].description
-        cell.date?.text = article[indexPath.row].publishedAt
+        let myDate = article[indexPath.row].publishedAt
+              let index = myDate.index(myDate.startIndex, offsetBy: 10)
+        let mySubstring = myDate[..<index]
+        cell.date?.text = String(mySubstring)
         
         return cell
     }

@@ -5,6 +5,9 @@
 //  Created by Nabil Reimer on 26.01.23.
 //
 
+
+// Toast oder direkt weiter navigieren zum HomeViewController
+
 import UIKit
 import CoreData
 
@@ -21,6 +24,7 @@ class AddScreenViewController: UIViewController {
     
     
     var categorieVC = CategorieViewController()
+    //Liste der Kategoreien in einem Array gespeichert
     var categories: [String] = ["Entertainment","Handy","Freizeit","Reisen","Wohnen","Verkauf","Gesundheit","Lifestyle","Einkommen","Alles"]
     
     override func viewDidLoad() {
@@ -47,7 +51,6 @@ class AddScreenViewController: UIViewController {
         toolbar.setItems([doneButton], animated: false)
         dateTextField.inputAccessoryView = toolbar
         
-        
     }
     
     @objc func donePressed() {
@@ -63,7 +66,6 @@ class AddScreenViewController: UIViewController {
         categorieTextField.text = categories[categoriePickerView.selectedRow(inComponent: 0)]
         self.view.endEditing(true)
     }
-    
     
     @IBAction func addButtonTapped(_ sender: Any) {
         // Bekommt den context
@@ -89,11 +91,6 @@ class AddScreenViewController: UIViewController {
             expense.isIncome = false
         }
         
-        
-        
-        
-        
-        
         // Speichert in CoreData
         do {
             try context.save()
@@ -101,10 +98,14 @@ class AddScreenViewController: UIViewController {
             print("Error saving data: \(error)")
         }
         
-        
+        // Toast anzeigen
+        let toastMessage = "Eintrag erfolgreich hinzugefügt"
+        let alert = UIAlertController(title: nil, message: toastMessage, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+            alert.dismiss(animated: true, completion: nil)
+        }
     }
-    
-    
 }
 
 extension AddScreenViewController: UIPickerViewDelegate, UIPickerViewDataSource{

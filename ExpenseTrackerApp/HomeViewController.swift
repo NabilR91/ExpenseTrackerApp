@@ -107,12 +107,43 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
+        // Hier wird überprüft ob der wert isIncome true oder false ist und jeh nachdem wird der Text in TableV rot oder grün angezeigt
+            let expense = expenses[indexPath.row]
+            if expense.isIncome == false {
+                cell.betrag?.textColor = .red
+            } else {
+                cell.betrag?.textColor = .green
+            }
         cell.betreff?.text = expenses[indexPath.row].category
         cell.datum?.text = expenses[indexPath.row].date
         cell.betrag?.text = expenses[indexPath.row].amount.description
         if expenses[indexPath.row].category == "Wohnen" {
             cell.icon?.image = UIImage(systemName: "house")
         }
+        // Hier wird die Kategorie überprüft und das entsprechende icon gesetzt
+            switch expense.category {
+            case "Entertainment":
+                cell.icon?.image = UIImage(systemName: "tv")
+            case "Handy":
+                cell.icon?.image = UIImage(systemName: "iphone")
+            case "Freizeit":
+                cell.icon?.image = UIImage(systemName: "gamecontroller")
+            case "Reisen":
+                cell.icon?.image = UIImage(systemName: "airplane")
+            case "Wohnen":
+                cell.icon?.image = UIImage(systemName: "house")
+            case "Verkauf":
+                cell.icon?.image = UIImage(systemName: "dollarsign.arrow.circlepath")
+            case "Gesundheit":
+                cell.icon?.image = UIImage(systemName: "figure.run.circle")
+            case "Lifestyle":
+                cell.icon?.image = UIImage(systemName: "tshirt")
+            case "Einkommen":
+                cell.icon?.image = UIImage(systemName: "bolt")
+            default:
+                cell.imageView?.image = nil
+            }
+        
         return cell
         
     }
