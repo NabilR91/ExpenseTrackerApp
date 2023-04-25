@@ -68,6 +68,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
         let mySubstring = myDate[..<index]
         cell.date?.text = String(mySubstring)
         
+        
         return cell
     }
     

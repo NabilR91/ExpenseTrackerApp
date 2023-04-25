@@ -28,7 +28,7 @@ class HomeViewController: UIViewController{
         tableview.delegate = self
         tableview.layer.cornerRadius = 30
         tableview.layer.masksToBounds = true
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = false
         
         
         
@@ -63,8 +63,8 @@ class HomeViewController: UIViewController{
         getAllExpenses()
         
         // Hier ist der Code für die gesamtEinnahmen ausgabe einnahme
-        var euroTF = String(updateIncome())
-        var euroTF2 = String(updateExpense())
+        let euroTF = String(updateIncome())
+        let euroTF2 = String(updateExpense())
         gesamtEinnahmen.text = euroTF+" €"
         gesamtAusgaben.text = euroTF2+" €"
         gesamtSaldo.text = String(Double(euroTF)!-Double(euroTF2)!)+" €"

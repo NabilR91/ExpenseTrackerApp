@@ -11,7 +11,8 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var titel: UILabel!
     @IBOutlet weak var review: UITextView!
     @IBOutlet weak var date: UILabel!
-
+    @IBOutlet weak var newsImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

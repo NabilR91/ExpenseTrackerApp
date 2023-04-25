@@ -29,7 +29,7 @@
 		162AB78329816B3500B99B09 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB78229816B3500B99B09 /* WelcomeViewController.swift */; };
 		162AB7872982C64300B99B09 /* AddScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7862982C64300B99B09 /* AddScreenViewController.swift */; };
 		162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AB7882987F97600B99B09 /* ProfilViewController.swift */; };
-		16ED60D4298BFC06005DCA97 /* constance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED60D3298BFC06005DCA97 /* constance.swift */; };
+		16ED60D4298BFC06005DCA97 /* Constance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED60D3298BFC06005DCA97 /* Constance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 		162AB78229816B3500B99B09 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		162AB7862982C64300B99B09 /* AddScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenViewController.swift; sourceTree = "<group>"; };
 		162AB7882987F97600B99B09 /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
-		16ED60D3298BFC06005DCA97 /* constance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constance.swift; sourceTree = "<group>"; };
+		16ED60D3298BFC06005DCA97 /* Constance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,33 @@
 		162AB746297154C200B99B09 /* ExpenseTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
+				16ED60DA2993AC6C005DCA97 /* ViewController */,
 				162AB77F29801E9300B99B09 /* Model */,
 				162AB747297154C200B99B09 /* AppDelegate.swift */,
 				162AB749297154C200B99B09 /* SceneDelegate.swift */,
+				162AB74D297154C200B99B09 /* Main.storyboard */,
+				162AB753297154C300B99B09 /* Assets.xcassets */,
+				162AB755297154C300B99B09 /* LaunchScreen.storyboard */,
+				162AB758297154C300B99B09 /* Info.plist */,
+				162AB77829801DA000B99B09 /* Model.xcdatamodeld */,
+			);
+			path = ExpenseTrackerApp;
+			sourceTree = "<group>";
+		};
+		162AB77F29801E9300B99B09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16ED60D3298BFC06005DCA97 /* Constance.swift */,
+				162AB774297ECC6A00B99B09 /* Article.swift */,
+				160A0B6829895645006ED525 /* User+CoreDataClass.swift */,
+				160A0B6929895645006ED525 /* User+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16ED60DA2993AC6C005DCA97 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				162AB74B297154C200B99B09 /* ViewController.swift */,
 				162AB78229816B3500B99B09 /* WelcomeViewController.swift */,
 				162AB7802981656000B99B09 /* RegisterViewController.swift */,
@@ -104,26 +128,10 @@
 				162AB76C2978364600B99B09 /* CategorieViewController.swift */,
 				162AB770297A988000B99B09 /* NewsTableViewCell.swift */,
 				162AB772297A989900B99B09 /* NewsViewController.swift */,
-				162AB774297ECC6A00B99B09 /* Article.swift */,
-				162AB74D297154C200B99B09 /* Main.storyboard */,
-				162AB753297154C300B99B09 /* Assets.xcassets */,
-				162AB755297154C300B99B09 /* LaunchScreen.storyboard */,
-				162AB758297154C300B99B09 /* Info.plist */,
 				162AB76A29759A0B00B99B09 /* AddViewController.swift */,
-				162AB77829801DA000B99B09 /* Model.xcdatamodeld */,
 				162AB7882987F97600B99B09 /* ProfilViewController.swift */,
-				16ED60D3298BFC06005DCA97 /* constance.swift */,
 			);
-			path = ExpenseTrackerApp;
-			sourceTree = "<group>";
-		};
-		162AB77F29801E9300B99B09 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				160A0B6829895645006ED525 /* User+CoreDataClass.swift */,
-				160A0B6929895645006ED525 /* User+CoreDataProperties.swift */,
-			);
-			path = Model;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +221,7 @@
 				162AB748297154C200B99B09 /* AppDelegate.swift in Sources */,
 				162AB7812981656000B99B09 /* RegisterViewController.swift in Sources */,
 				162AB7892987F97600B99B09 /* ProfilViewController.swift in Sources */,
-				16ED60D4298BFC06005DCA97 /* constance.swift in Sources */,
+				16ED60D4298BFC06005DCA97 /* Constance.swift in Sources */,
 				162AB74A297154C200B99B09 /* SceneDelegate.swift in Sources */,
 				160A0B6D29895645006ED525 /* User+CoreDataProperties.swift in Sources */,
 				160A0B6C29895645006ED525 /* User+CoreDataClass.swift in Sources */,

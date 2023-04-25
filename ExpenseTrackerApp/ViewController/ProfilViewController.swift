@@ -7,12 +7,13 @@
 
 import UIKit
 import CoreData
+import WebKit
 
 class ProfilViewController: UIViewController {
     
     @IBOutlet weak var labelFullName: UILabel!
-     @IBOutlet weak var labelEmail: UILabel!
-    
+    @IBOutlet weak var labelEmail: UILabel!
+    @IBOutlet weak var webView: WKWebView!
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -48,6 +49,9 @@ class ProfilViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = URL(string: "https://www.oanda.com/currency-converter/de/?from=EUR&to=USD&amount=1")!
+                webView.load(URLRequest(url: url))
         
         // Hier werden die BenutzerDaten des angemeldeten Users im ProfilScreen angezeigt
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
